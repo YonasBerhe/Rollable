@@ -15,30 +15,6 @@ public class PlayerController : MonoBehaviour {
 
 	}
 
-/*	void Update () {
-
-		if (Input.GetKey (KeyCode.B)) {
-			Debug.Log ("B pushed");
-			speed = speed - 10;
-
-		}
-
-		if (Input.GetKey(KeyCode.A))
-			Debug.Log("Pressing A");
-
-		if (Input.GetKey(KeyCode.W))
-			Debug.Log("Pressing W");
-
-		if (Input.GetKey(KeyCode.S))
-			Debug.Log("Pressing S");
-
-		if (Input.GetKey(KeyCode.D))
-			Debug.Log("Pressing D");
-
-
-
-	}
-*/
 
 	//Physics code goes here
 	void FixedUpdate () 
@@ -53,7 +29,9 @@ public class PlayerController : MonoBehaviour {
 		rb.AddForce (movement * speed); 
 
 		if (Input.GetKey (KeyCode.B)) {
-			rb.Sleep(); 
+			//rb.Sleep();
+
+		rb.velocity = Vector3.zero;
 		}
 
 
